@@ -11,24 +11,24 @@ export class AffiliateService {
   constructor(private http: HttpClient) { }
 
   getList() {
-    return this.http.get('${this.url}');
+    return this.http.get(`${this.url}`);
   }
 
   getById(id: number) {
-    return this.http.get('${this.url}/{id}');
+    return this.http.get(`${this.url}/${id}`);
   }
 
   postAffiliate(affiliate: any) {
-    return this.http.post('${this.url}/add', JSON.stringify(affiliate));
+    return this.http.post(`${this.url}/add`, JSON.stringify(affiliate));
   }
 
   deleteAffiliate(id: number) {
-    return this.http.delete('${this.url}/delete/{id}');
+    return this.http.delete(`${this.url}/delete/${id}`);
   }
 
 
   putAffiliate(affiliate: any) {
-    return this.http.put('${this.url}/update', JSON.stringify(affiliate));
+    return this.http.put(`${this.url}/update`, JSON.stringify(affiliate));
   }
 
 }

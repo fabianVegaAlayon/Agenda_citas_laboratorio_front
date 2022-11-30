@@ -17,11 +17,12 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatMenuModule} from '@angular/material/menu';
 import { LayoutModule } from '@angular/cdk/layout';
-import { AffiliateComponent } from './affiliate/affiliate.component';
+import { AffiliateComponent } from './Affiliates/affiliate/affiliate.component';
 import { AppoinmentComponent } from './appoinment/appoinment.component';
 import { MasterComponent } from './master/master.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MatNativeDateModule } from '@angular/material/core';
+import { AddAffiliateComponent } from './Affiliates/add-affiliate/add-affiliate.component';
 
 
 
@@ -32,7 +33,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     AffiliateComponent,
     AppoinmentComponent,
     MasterComponent,
-    NavBarComponent
+    NavBarComponent,
+    AddAffiliateComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AffiliateComponent } from './affiliate/affiliate.component';
+import { AddAffiliateComponent } from './Affiliates/add-affiliate/add-affiliate.component';
+import { AffiliateComponent } from './Affiliates/affiliate/affiliate.component';
 import { AppoinmentComponent } from './appoinment/appoinment.component';
 import { MasterComponent } from './master/master.component';
 
@@ -11,6 +12,11 @@ const routes: Routes = [
     path: 'affiliate',
     component: AffiliateComponent
   },
+  {
+    path: 'addAffiliate',
+    component: AddAffiliateComponent
+  },
+
   {
     path: 'appoinment',
     component: AppoinmentComponent
