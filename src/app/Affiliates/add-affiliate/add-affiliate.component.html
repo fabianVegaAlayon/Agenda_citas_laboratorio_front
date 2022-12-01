@@ -6,19 +6,19 @@
     <div class="add-affiliate-body">
         <div class="add-aff-body-header">
             <mat-form-field>
-                <input matInput  type="text" placeholder="Ingrese Nombre">
+                <input matInput  type="text" placeholder="Ingrese Nombre" [(ngModel)]="aff.name">
               </mat-form-field>
             
               <mat-form-field>
-                <input matInput type="number" placeholder="Ingrese Edad">
+                <input matInput type="number" placeholder="Ingrese Edad" [(ngModel)]="aff.age">
               </mat-form-field>
             
               <mat-form-field>
-                <input matInput  type="email" placeholder="Ingrese Correo">
+                <input matInput  type="email" placeholder="Ingrese Correo" [(ngModel)]="aff.mail">
               </mat-form-field>
             
-              <button mat-raised-button color="primary">Guardar</button>
-              <button mat-raised-button color="warn">Cancelar</button>
+              <button mat-raised-button color="primary" (click)="insertAffiliate()">Guardar</button>
+              <button mat-raised-button color="warn" (click)="cancelButton()">Cancelar</button>
         </div>
     </div>
 </div>
