@@ -1,9 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Affiliate } from '../../models/Affiliate';
-import { AffiliateService } from '../../afiliate.service';
+import { AffiliateService } from 'src/app/services/affiliate/affiliate.service';
 import { Router } from '@angular/router';
 import { MatTable } from '@angular/material/table';
+
 
 @Component({
   selector: 'app-affiliate',

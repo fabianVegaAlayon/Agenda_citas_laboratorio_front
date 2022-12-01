@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { Affiliate } from 'src/app/models/Affiliate';
-import { AffiliateService } from 'src/app/afiliate.service';
+import { Router } from '@angular/router'
+import { AffiliateService } from 'src/app/services/affiliate/affiliate.service';
+
 
 @Component({
   selector: 'app-add-affiliate',

@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AfiliateService } from './afiliate.service';
+import { AffiliateService } from 'src/app/services/affiliate/affiliate.service';
 
 describe('AfiliateService', () => {
-  let service: AfiliateService;
+  let service: AffiliateService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(AfiliateService);
+    service = TestBed.inject(AffiliateService);
   });
 
   it('should be created', () => {

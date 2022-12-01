@@ -3,6 +3,4 @@ export class Master{
     name_affiliate:string;
     age:number;
     mail:string;
-
-
 }

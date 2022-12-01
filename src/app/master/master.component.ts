@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
 import { Master } from '../models/Master';
-import { MasterService } from '../master.service';
+import { MasterService } from '../services/master/master.service';
 import { DatePipe } from '@angular/common';
 
 @Component({
