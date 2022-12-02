@@ -6,7 +6,7 @@
     <div class="affiliate-body">
         <div class="aff-body-header">
             <button mat-icon-button color="accent"
-                aria-label="add-button" (click)="addAffiliate()">
+                aria-label="add-button" (click)="addAffiliate()" id="btn_Add">
                 <mat-icon>add</mat-icon>
             </button>
             <h5>Nuevo Afiliado</h5>
@@ -49,10 +49,9 @@
                     <th mat-header-cell *matHeaderCellDef> Opciones </th>
                     <td  *matCellDef="let element"> 
                         <button mat-icon-button color="accent"
-                        aria-label="add-button">
+                        aria-label="add-button" (click)="getAffiliateId(element.id)">
                         <mat-icon>update</mat-icon>
                     </button>   
-                 
                         <button mat-icon-button color="accent"
                         aria-label="delete-button" (click)="deleteAffiliate(element.id)">
                         <mat-icon>delete_outline</mat-icon>

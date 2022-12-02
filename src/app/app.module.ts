@@ -23,6 +23,7 @@ import { MasterComponent } from './master/master.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { AddAffiliateComponent } from './Affiliates/add-affiliate/add-affiliate.component';
+import { UpdateAffiliateComponent } from './Affiliates/update-affiliate/update-affiliate.component';
 
 
 
@@ -34,7 +35,8 @@ import { AddAffiliateComponent } from './Affiliates/add-affiliate/add-affiliate.
     AppoinmentComponent,
     MasterComponent,
     NavBarComponent,
-    AddAffiliateComponent
+    AddAffiliateComponent,
+    UpdateAffiliateComponent
   ],
   imports: [
     BrowserModule,

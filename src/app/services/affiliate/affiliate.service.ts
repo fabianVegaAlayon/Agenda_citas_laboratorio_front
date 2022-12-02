@@ -33,7 +33,7 @@ console.log( 'la url ' + this.url+'/add',JSON.stringify(affiliate))
 
 
   putAffiliate(affiliate: any) {
-    return this.http.put(`${this.url}/update`, JSON.stringify(affiliate));
+    return this.http.put(`${this.url}/update`+'?id='+affiliate.id + '&name='+ affiliate.name + '&age='+affiliate.age + '&mail='+affiliate.mail, JSON.stringify(null));
   }
 
 }

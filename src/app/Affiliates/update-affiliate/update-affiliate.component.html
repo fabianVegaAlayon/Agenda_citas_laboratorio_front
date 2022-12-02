@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="add-affiliate-header">
+        <h1>Afiliados - Actualizar Afiliado</h1>
+        <mat-divider></mat-divider>
+    </div>
+    <div class="add-affiliate-body">
+        <div class="add-aff-body-header">
+            <mat-form-field>
+                <input matInput  type="text" placeholder="Ingrese Nombre" [(ngModel)]="affiliate.name" >
+              </mat-form-field>
+            
+              <mat-form-field>
+                <input matInput type="number" placeholder="Ingrese Edad" [(ngModel)]="affiliate.age">
+              </mat-form-field>
+            
+              <mat-form-field>
+                <input matInput  type="email" placeholder="Ingrese Correo" [(ngModel)]="affiliate.mail">
+              </mat-form-field>
+            
+              <button mat-raised-button color="primary" (click)="updateAffiliate()">Guardar</button>
+              <button mat-raised-button color="warn" (click)="cancelButton()">Cancelar</button>
+        </div>
+    </div>
+</div>

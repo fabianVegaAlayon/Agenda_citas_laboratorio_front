@@ -4,6 +4,7 @@ import { Affiliate } from '../../models/Affiliate';
 import { AffiliateService } from 'src/app/services/affiliate/affiliate.service';
 import { Router } from '@angular/router';
 import { MatTable } from '@angular/material/table';
+import { UpdateAffiliateComponent } from '../update-affiliate/update-affiliate.component';
 
 
 @Component({
@@ -15,21 +16,23 @@ export class AffiliateComponent implements OnInit {
   displayedColumns: string[] = ['id', 'name', 'age', 'mail', 'options'];
   affiliate: Affiliate[];
   stats: any;
+  id_affiliate: number;
   @ViewChild(MatTable) affiliatesTable: MatTable<Affiliate>;
+
 
   constructor(private affiliateService: AffiliateService, private route: Router) { }
 
 
   ngOnInit(): void {
     this.getAllAffiliates();
+    console.log(this.id_affiliate)
   }
 
   getAllAffiliates() {
     this.affiliateService.getList().subscribe((result: Affiliate[]) => this.affiliate = result);
   }
 
-  addAffiliate()
-  {
+  addAffiliate() {
     this.route.navigate(["addAffiliate"]);
   }
 
@@ -37,21 +40,27 @@ export class AffiliateComponent implements OnInit {
     console.log(id)
     this.affiliateService.deleteAffiliate(id).subscribe(
       {
-        next:() => {
+        next: () => {
           alert('la petición fue exitosa')
-          this.affiliatesTable.viewChange;
-        }, 
-        error: () =>{
+          this.affiliatesTable.renderRows();
+        },
+        error: () => {
           alert('ocurrió un error al hacer la petición')
-          this.affiliatesTable.viewChange;
+          this.affiliatesTable.renderRows();
         }
       }
-    
+
     );
-  }
-
- 
-
-
+    this.affiliatesTable.renderRows();
 
   }
+
+  getAffiliateId(id: number) {
+    localStorage.setItem("id", id.toString());
+    this.route.navigate(["updateAffiliate"]);
+
+  }
+
+
+
+}
