@@ -35,7 +35,6 @@ export class MasterComponent implements OnInit {
     this.dateFormatter = this.changeFormat(this.dateAppoinment);
     this.masterService.getMasterByDate(this.dateFormatter).subscribe((result: any) => this.masterData = result);
 
-    console.log('Esta es la variable: ' + this.changeFormat(this.dateAppoinment));
   }
 
 

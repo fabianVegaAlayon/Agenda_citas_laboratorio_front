@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="test-header">
+        <h1>Examenes</h1>
+        <mat-divider></mat-divider>  
+    </div>
+    <div class="test-body">
+        <div class="test-body-header">
+            <button mat-icon-button color="accent"
+                aria-label="add-button" (click)="addTest()" id="btn_Add">
+                <mat-icon>add</mat-icon>
+            </button>
+            <h5>Nuevo Test</h5>
+        </div>
+    <div class="test-body-body">
+        <table mat-table [dataSource]="test" class="mat-elevation-z8">
+            <!-- id Column -->
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> Id. Test</th>
+                <td mat-cell *matCellDef="let element">
+                    {{element.id}}
+                </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Nombre </th>
+                <td mat-cell *matCellDef="let element">
+                    {{element.name}} </td>
+            </ng-container>
+
+            <!-- Description Column -->
+            <ng-container matColumnDef="description">
+                <th mat-header-cell *matHeaderCellDef> Descripción </th>
+                <td mat-cell *matCellDef="let element"> 
+                    {{element.description}}
+                </td>
+            </ng-container>
+
+
+
+            <!-- Options Column -->
+            <ng-container matColumnDef="options">
+                <th mat-header-cell *matHeaderCellDef> Opciones </th>
+                <td  *matCellDef="let element"> 
+                    <button mat-icon-button color="accent"
+                    aria-label="add-button" (click)="getTestId(element.id)"> 
+                    <mat-icon>update</mat-icon>
+                </button>   
+                    <button mat-icon-button color="accent"
+                    aria-label="delete-button" (click)="deleteTest(element.id)" >
+                    <mat-icon>delete_outline</mat-icon>
+                </button>               
+                  
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="add-affiliate-header">
+        <h1>Citas - Actualizar Cita</h1>
+        <mat-divider></mat-divider>
+    </div>
+    <div class="add-affiliate-body">
+        <div class="add-aff-body-header">
+            <mat-form-field class="mat-full-width"
+                style="margin-left:20px ;">
+                
+                <input  [(ngModel)]="data.date" 
+                    matInput  [matDatepicker]="picker" style="position:absolute ;"> 
+                    
+                <mat-hint>DD/MM/YYYY</mat-hint>
+                <mat-datepicker-toggle
+                    matIconSuffix [for]="picker" matSuffix>
+                    <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                   
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-label>Hora</mat-label>
+            <input type="time" id="appt" name="appt"
+                min="06:00" max="20:00" step="1" required [(ngModel)]="data.hour">
+
+            <mat-form-field>
+                <mat-label>Id Test</mat-label>
+                <mat-select [(ngModel)]="selectedIdTest" name="testId"
+                    [(ngModel)]="data.id_test">
+                    <mat-option *ngFor="let testId of test" [value]="testId.id">
+                        {{testId.id + '-' + testId.name}}
+
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Id Afiliado</mat-label>
+                <mat-select [(ngModel)]="selectedIdAffiliate" name="idAffiliate"
+                    [(ngModel)]="data.id_affiliate">
+                    <mat-option *ngFor="let idAffiliate of appoinment"
+                        [value]="idAffiliate.id">
+                        {{idAffiliate.id +' - ' + idAffiliate.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+
+
+            <button mat-raised-button color="primary" (click)="updateAppoinment()">Guardar</button>
+            <button mat-raised-button color="warn" (click)="cancelButton()">Cancelar</button>
+        </div>
+
+    </div>
+</div>

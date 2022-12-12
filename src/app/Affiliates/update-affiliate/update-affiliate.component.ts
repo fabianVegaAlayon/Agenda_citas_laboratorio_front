@@ -10,7 +10,7 @@ import { AffiliateService } from 'src/app/services/affiliate/affiliate.service';
 })
 export class UpdateAffiliateComponent implements OnInit {
   affiliate: Affiliate;
-  constructor(private router:Router, private affiliateService:AffiliateService) { }
+  constructor(private router: Router, private affiliateService: AffiliateService) { }
 
   ngOnInit(): void {
     this.fillFieldsAffiliate();
@@ -21,18 +21,18 @@ export class UpdateAffiliateComponent implements OnInit {
   }
 
 
-  fillFieldsAffiliate()
-  {
-    let idAffiliate=localStorage.getItem("id");
-    this.affiliateService.getById(+idAffiliate).subscribe((result: Affiliate) => { this.affiliate = result});
+  fillFieldsAffiliate() {
+    let idAffiliate = localStorage.getItem("id");
+    this.affiliateService.getById(+idAffiliate).subscribe((result: Affiliate) => { this.affiliate = result });
   }
 
   updateAffiliate() {
     this.affiliateService.putAffiliate(this.affiliate).subscribe((datos: any) => {
-      }     
-   )
-  alert('Affiliado actualizado')
-   this.router.navigate(["affiliate"]);}
+    }
+    )
+    alert('Affiliado actualizado')
+    this.router.navigate(["affiliate"]);
+  }
 
 
 }

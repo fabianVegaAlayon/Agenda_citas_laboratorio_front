@@ -18,25 +18,33 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatMenuModule} from '@angular/material/menu';
 import { LayoutModule } from '@angular/cdk/layout';
 import { AffiliateComponent } from './Affiliates/affiliate/affiliate.component';
-import { AppoinmentComponent } from './appoinment/appoinment.component';
 import { MasterComponent } from './master/master.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { AddAffiliateComponent } from './Affiliates/add-affiliate/add-affiliate.component';
 import { UpdateAffiliateComponent } from './Affiliates/update-affiliate/update-affiliate.component';
-
-
-
-
+import { AddAppoinmentComponent } from './appoinments/add-appoinment/add-appoinment.component';
+import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+import {MatSelectModule} from '@angular/material/select';
+import { AppoinmentComponent } from './appoinments/appoinment/appoinment.component';
+import { UpdateAppoinmentComponent } from './appoinments/update-appoinment/update-appoinment.component';
+import { TestComponent } from './tests/test/test.component';
+import { AddTestComponent } from './tests/add-test/add-test.component';
+import { UpdateTestComponent } from './tests/update-test/update-test.component';
 @NgModule({
   declarations: [
     AppComponent,
     AffiliateComponent,
-    AppoinmentComponent,
     MasterComponent,
     NavBarComponent,
     AddAffiliateComponent,
-    UpdateAffiliateComponent
+    UpdateAffiliateComponent,
+    AppoinmentComponent,
+    AddAppoinmentComponent,
+    UpdateAppoinmentComponent,
+    TestComponent,
+    AddTestComponent,
+    UpdateTestComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +63,11 @@ import { UpdateAffiliateComponent } from './Affiliates/update-affiliate/update-a
     LayoutModule,
     MatToolbarModule,
     MatIconModule,
-    MatNativeDateModule
+    MatNativeDateModule, 
+    NgxMaterialTimepickerModule,
+    MatSelectModule
+  
+
    
   ],
   providers: [],

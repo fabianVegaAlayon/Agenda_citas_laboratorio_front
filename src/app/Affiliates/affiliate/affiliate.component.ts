@@ -17,7 +17,7 @@ export class AffiliateComponent implements OnInit {
   affiliate: Affiliate[];
   stats: any;
   id_affiliate: number;
-  @ViewChild(MatTable) affiliatesTable: MatTable<Affiliate>;
+
 
 
   constructor(private affiliateService: AffiliateService, private route: Router) { }
@@ -42,16 +42,14 @@ export class AffiliateComponent implements OnInit {
       {
         next: () => {
           alert('la petición fue exitosa')
-          this.affiliatesTable.renderRows();
         },
         error: () => {
-          alert('ocurrió un error al hacer la petición')
-          this.affiliatesTable.renderRows();
+          this.getAllAffiliates();
         }
       }
 
     );
-    this.affiliatesTable.renderRows();
+    
 
   }
 

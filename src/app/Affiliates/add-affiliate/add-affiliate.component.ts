@@ -27,10 +27,10 @@ export class AddAffiliateComponent implements OnInit {
   insertAffiliate() {
     console.log('entre al componente con la info' + this.aff.id + this.aff.name + this.aff.age + this.aff.mail)
     this.affiliateService.postAffiliate(this.aff).subscribe(datos => {
-      console.log(datos)
+
 
       alert('Registro Insertado Correctamente');
-
+      this.router.navigate(["affiliate"]);
     });
   }
 

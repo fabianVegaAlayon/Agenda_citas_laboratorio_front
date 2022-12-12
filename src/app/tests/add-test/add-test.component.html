@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="add-affiliate-header">
+        <h1>Examenes - Nuevo Examen</h1>
+        <mat-divider></mat-divider>
+    </div>
+    <div class="add-affiliate-body">
+        <div class="add-aff-body-header">
+    
+              <mat-form-field>
+                <input matInput type="text" placeholder="Nombre del examen"  [(ngModel)]="testObj.name">
+              </mat-form-field>
+            
+              <mat-form-field class="description">
+                <mat-label>Descripción</mat-label>
+                <textarea matInput [(ngModel)]="testObj.description" placeholder="Descripción del examen..."></textarea>
+              </mat-form-field>
+            
+              <button mat-raised-button color="primary" (click)="addTest()">Guardar</button>
+              <button mat-raised-button color="warn" (click)="cancelButton()">Cancelar</button>
+        </div>
+    </div>
+</div>
