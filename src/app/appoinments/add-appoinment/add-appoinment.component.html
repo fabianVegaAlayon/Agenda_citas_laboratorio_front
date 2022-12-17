@@ -1,16 +1,14 @@
 <div class="container">
-    <div class="add-affiliate-header">
+    <div class="add-appoinment-header">
         <h1>Citas - Nueva Cita</h1>
-        <mat-divider></mat-divider>
+        <mat-divider class="divider"></mat-divider>
     </div>
     <div class="add-affiliate-body">
-        <div class="add-aff-body-header">
-            <mat-form-field class="mat-full-width"
-                style="margin-left:20px ;">
+        <div class="add-app-body-header">
+            <mat-form-field class="box">
                 <mat-label>Seleccione la fecha</mat-label>
                 <input [(ngModel)]="dateAppoinment" matInput
-                    [matDatepicker]="picker" style="position:absolute ;">
-                <mat-hint>MM/DD/YYYY</mat-hint>
+                    [matDatepicker]="picker">
                 <mat-datepicker-toggle
                     matIconSuffix [for]="picker" matSuffix>
                     <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
@@ -20,9 +18,10 @@
 
 
             <mat-label>Hora</mat-label>
-            <input type="time" id="appt" name="appt"
+            <input class="box" type="time" id="appt" name="appt"
                 min="06:00" max="20:00" step="1" required [(ngModel)]="hour">
-            <mat-form-field>
+                
+            <mat-form-field class="box">
                 <mat-label>Id Test</mat-label>
                 <mat-select [(ngModel)]="selectedIdTest" name="testId">
                     <mat-option *ngFor="let testId of test" [value]="testId.id">
@@ -31,7 +30,7 @@
                     </mat-option>
                 </mat-select>
             </mat-form-field>
-            <mat-form-field>
+            <mat-form-field class="box">
                 <mat-label>Id Afiliado</mat-label>
                 <mat-select [(ngModel)]="selectedIdAffiliate"
                     name="idAffiliate">
@@ -42,9 +41,9 @@
                 </mat-select>
             </mat-form-field>
 
-            <button mat-raised-button color="primary"
+            <button class="box" mat-raised-button color="primary"
                 (click)="insertAppoinment(dateAppoinment,hour,selectedIdTest,selectedIdAffiliate)">Guardar</button>
-            <button mat-raised-button color="warn" (click)="cancelButton()">Cancelar</button>
+            <button class="box" mat-raised-button color="warn" (click)="cancelButton()">Cancelar</button>
         </div>
     </div>
 </div>

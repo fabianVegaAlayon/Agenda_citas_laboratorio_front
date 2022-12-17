@@ -12,11 +12,24 @@ table {
   padding: 1rem;
 }
 
-#btn_Add
+.affiliate-header
 {
- 
-  float:right;
+  margin: 20px 0px 20px 20px;
+}
 
+.divider {
+  border-top: 3px solid #bbb;
+}
 
+h5{
+  text-align: right;
+  padding:9px;
+  
+}
 
+.aff-body-header
+{
+  max-width:95%;
+  display:flex;
+  justify-content: right;
 }

@@ -1,30 +1,31 @@
 <div class="container">
-    <div class="add-affiliate-header">
+    <div class="updt-appoinment-header">
         <h1>Citas - Actualizar Cita</h1>
-        <mat-divider></mat-divider>
+        <mat-divider class="divider"></mat-divider>
     </div>
-    <div class="add-affiliate-body">
-        <div class="add-aff-body-header">
-            <mat-form-field class="mat-full-width"
+    <div class="updt-app-body">
+        <div class="updt-app-body-header">
+            <mat-form-field class="box"
                 style="margin-left:20px ;">
-                
-                <input  [(ngModel)]="data.date" 
-                    matInput  [matDatepicker]="picker" style="position:absolute ;"> 
-                    
+
+                <input [(ngModel)]="data.date"
+                    matInput [matDatepicker]="picker" style="position:absolute
+                    ;">
+
                 <mat-hint>DD/MM/YYYY</mat-hint>
                 <mat-datepicker-toggle
                     matIconSuffix [for]="picker" matSuffix>
                     <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
-                   
                 </mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
 
             <mat-label>Hora</mat-label>
-            <input type="time" id="appt" name="appt"
-                min="06:00" max="20:00" step="1" required [(ngModel)]="data.hour">
+            <input class="box" type="time" id="appt" name="appt"
+                min="06:00" max="20:00" step="1" required
+                [(ngModel)]="data.hour">
 
-            <mat-form-field>
+            <mat-form-field class="box">
                 <mat-label>Id Test</mat-label>
                 <mat-select [(ngModel)]="selectedIdTest" name="testId"
                     [(ngModel)]="data.id_test">
@@ -34,7 +35,7 @@
                     </mat-option>
                 </mat-select>
             </mat-form-field>
-            <mat-form-field>
+            <mat-form-field class="box">
                 <mat-label>Id Afiliado</mat-label>
                 <mat-select [(ngModel)]="selectedIdAffiliate" name="idAffiliate"
                     [(ngModel)]="data.id_affiliate">
@@ -47,8 +48,10 @@
 
 
 
-            <button mat-raised-button color="primary" (click)="updateAppoinment()">Guardar</button>
-            <button mat-raised-button color="warn" (click)="cancelButton()">Cancelar</button>
+            <button class="box" mat-raised-button color="primary"
+                (click)="updateAppoinment()">Guardar</button>
+            <button class="box" mat-raised-button color="warn"
+                (click)="cancelButton()">Cancelar</button>
         </div>
 
     </div>

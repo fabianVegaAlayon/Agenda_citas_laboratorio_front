@@ -3,13 +3,12 @@
     <div class="master-header">
 
         <h1>Consultas</h1>
-        <mat-divider></mat-divider>
-        <mat-form-field class="mat-full-width"
+        <mat-divider class="divider"></mat-divider>
+        <mat-form-field class="box"
             style="margin-left:20px ;">
             <mat-label>Seleccione la fecha</mat-label>
             <input [(ngModel)]="dateAppoinment" matInput
-                [matDatepicker]="picker" style="position:absolute ;">
-            <mat-hint>MM/DD/YYYY</mat-hint>
+                [matDatepicker]="picker">
             <mat-datepicker-toggle
                 matIconSuffix [for]="picker" matSuffix>
                 <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
@@ -20,11 +19,10 @@
             aria-label="search_icon_by_date">
             <mat-icon>search_icon</mat-icon>
         </button>
-        <mat-form-field>
+        <mat-form-field class="box">
             <mat-label>Id Afiliado</mat-label>
             <input matInput [(ngModel)]="idAffiliate" type="number"
-                placeholder="Affiliate id"
-                style="margin-left:60px ;">
+                placeholder="Affiliate id" min="0">
         </mat-form-field>
         <button (click)="listById()" mat-icon-button color="accent"
             aria-label="search_icon_by_id">

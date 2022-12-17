@@ -1,24 +1,25 @@
 <div class="container">
     <div class="add-affiliate-header">
         <h1>Afiliados - Nuevo Afiliado</h1>
-        <mat-divider></mat-divider>
+        <mat-divider class="divider"></mat-divider>
     </div>
     <div class="add-affiliate-body">
         <div class="add-aff-body-header">
-            <mat-form-field>
-                <input matInput  type="text" placeholder="Ingrese Nombre" [(ngModel)]="aff.name">
+            <mat-form-field class="box">
+                <input matInput  type="text" placeholder="Ingrese Nombre" [(ngModel)]="aff.name" >
               </mat-form-field>
             
-              <mat-form-field>
-                <input matInput type="number" placeholder="Ingrese Edad" [(ngModel)]="aff.age">
+              <mat-form-field  class="box">
+                <input matInput type="number" min="0" placeholder="Ingrese Edad" [(ngModel)]="aff.age">
               </mat-form-field>
             
-              <mat-form-field>
+              <mat-form-field class="box">
                 <input matInput  type="email" placeholder="Ingrese Correo" [(ngModel)]="aff.mail">
               </mat-form-field>
-            
-              <button mat-raised-button color="primary" (click)="insertAffiliate()">Guardar</button>
-              <button mat-raised-button color="warn" (click)="cancelButton()">Cancelar</button>
+             
+              <button class="box" mat-raised-button color="primary" (click)="insertAffiliate()">Guardar</button> 
+          
+              <button class="box" mat-raised-button color="warn" (click)="cancelButton()">Cancelar</button>
         </div>
     </div>
 </div>

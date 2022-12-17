@@ -1,0 +1,20 @@
+.add-test-header,
+.add-test-body-header
+ {
+    display: inline-flexbox;
+    margin: 20px 20px 20px 20px;
+}
+h1
+{
+   margin: 5px 0px 5px 0px;
+}
+
+.divider {
+    border-top: 3px solid #bbb;
+}
+
+.box {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 8px 8px 8px 0;
+}
