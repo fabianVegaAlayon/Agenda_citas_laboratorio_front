@@ -1,4 +1,4 @@
-interface Appoinment {
+export class Appoinment { //estaba como interface
   
 	 id:number ;
      date:Date;

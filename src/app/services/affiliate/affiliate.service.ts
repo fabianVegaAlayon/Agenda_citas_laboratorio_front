@@ -21,8 +21,7 @@ export class AffiliateService {
   }
 
   postAffiliate(affiliate: Affiliate) {
-    console.log('Estoy en el servicio y la data es: ' + JSON.stringify(affiliate))
-    console.log('la url ' + this.url + '/add', JSON.stringify(affiliate))
+
     //return this.http.post(`${this.url}/add`,JSON.stringify(affiliate));
     return this.http.post<Affiliate>(this.url + '/add' + '?id=' + affiliate.id + '&name=' + affiliate.name + '&age=' + affiliate.age + '&mail=' + affiliate.mail, JSON.stringify(null));
   }
